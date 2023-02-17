@@ -7,7 +7,7 @@
                 mongourl: "mongodb+srv://tunaerkol:090909te@cluster0.gtdvxey.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
                 servers: {
                     token: process.env.servertoken, // Server List Bot Token
-                    prefix: "e!"
+                    prefix: "-"
                 }
             },
         
