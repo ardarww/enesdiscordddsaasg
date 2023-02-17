@@ -8,7 +8,7 @@ console.log("[Electron CodShare]: Api router loaded.");
 app.get("/api", async (req, res) => {
     res.json({
         "Hello": "World",
-        "Template By": "vcodes.xyz",
+        "Template By": "electron.tk",
         "Author": "Claudette"
     });
 });
