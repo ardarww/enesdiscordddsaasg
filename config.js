@@ -12,7 +12,7 @@ module.exports = {
   },
 
   website: {
-    callback: "https://scrawny-western-timpani.glitch.me/callback", //example : https://vcodes.xyz avoid / at last.
+    callback: "https://electronn.glitch.me/callback", //example : https://vcodes.xyz avoid / at last.
     secret: process.env.secret,
     clientID: "1075906545931526254", // Bot client id.
     tags: [
