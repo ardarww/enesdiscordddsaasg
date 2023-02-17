@@ -2,7 +2,7 @@
 <title>Vote | <%= botdata.username %> | Discord Bots</title>
 <head>
     <meta name="og:title" content="<%= botdata.username %>#<%=botdata.discrim%>">
-    <meta name="og:description" content="Vote for the bot named <%= botdata.username %> in vCodes.">
+    <meta name="og:description" content="Vote for the bot named <%= botdata.username %> in Electron.">
         <meta property="og:image" content="<%= botdata.avatar %>">
 </head>
 <div class="container px-3 mt-2 pt-5">
@@ -63,7 +63,7 @@
      title: 'Successful...',
      closeOnConfirm: false,
      text: urlParams.get('message'),
-     footer: 'Copyright 2022 &copy vCodes.xyz - All right reserved.'
+     footer: 'Copyright 2022 &copy electron.tk - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/bot/<%= botdata.botID %>`;
@@ -75,7 +75,7 @@
      icon: 'error',
      title: 'Oops...',
      text: urlParams.get('message'),
-     footer: 'Copyright 2022 &copy vCodes.xyz - All right reserved.'
+     footer: 'Copyright 2022 &copy electron.tk - All right reserved.'
     }).then((result) => {
   if (result.isConfirmed) {
     window.location.href = `/bot/${req.params.botID}`;

@@ -33,10 +33,10 @@
         </div>
                   <input type="hidden" name="page" value="1">
                 </form>
-          <% global.config.website.servers.tags.slice(0, 3).map(tag => { %>
+          <% global.Electron CodShare .website.servers.tags.slice(0, 3).map(tag => { %>
           	<a title="vCodes" href="/servers/tag/<%= tag.name %>" class="btn btn-vcodes"><i class="<%= tag.icon %>"></i>&nbsp;<%= tag.name %></a>
           <% }) %>
-          	<a title="vCodes" href="/servers/tags" class="btn btn-vcodes"><i class="fal fa-tags"></i>&nbsp;Explore Tags</a>
+          	<a title="Electron CodShare " href="/servers/tags" class="btn btn-vcodes"><i class="fal fa-tags"></i>&nbsp;Explore Tags</a>
               </div>
       </div>
     </div>

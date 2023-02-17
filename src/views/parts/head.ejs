@@ -43,7 +43,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark p-2 pl-4 pr-4 bg-vcodes z">
         <div class="container">
-        <a title="vcodes" class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="../../img/logo.png" alt="vCodes"/></a>
+        <a title="Electron CodShare " class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="../../img/logo.png" alt="Electron CodShare "/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
           <span class="fal fa-bars fa-2x"></span>
         </button>
@@ -52,34 +52,34 @@
           <ul class="navbar-nav mainlink mr-auto">
             <% if(!req.originalUrl.includes('/server')) { %>
             <li class="nav-item">
-              <a title="vcodes" class="nav-link nvhome" href="/"><i class="fal fa-home mr-1"></i> Home</a>
+              <a title="Electron CodShare " class="nav-link nvhome" href="/"><i class="fal fa-home mr-1"></i> Home</a>
             </li>
             <li class="nav-item">
-              <a title="vcodes" class="nav-link" href="/bots"><i class="fal fa-robot mr-1"></i> Bots</a>
+              <a title="Electron CodShare " class="nav-link" href="/bots"><i class="fal fa-robot mr-1"></i> Bots</a>
             </li>
 
             <% if(user) {%>
             <li class="nav-item">
-                <a title="vcodes" class="nav-link" href="/addbot"><i class="fal fa-plus mr-1"></i> Add Bot</a>
+                <a title="Electron CodShare " class="nav-link" href="/addbot"><i class="fal fa-plus mr-1"></i> Add Bot</a>
             </li>
             <% } %>
             <li class="nav-item">
-                <a title="vcodes" class="nav-link" href="/servers"><i class="fal fa-server mr-1"></i> Servers</a>
+                <a title="Electron CodShare " class="nav-link" href="/servers"><i class="fal fa-server mr-1"></i> Servers</a>
             </li>
             
             <% } else { %>
             <li class="nav-item">
-              <a title="vcodes" class="nav-link nvhome" href="/servers"><i class="fal fa-home mr-1"></i> Home</a>
+              <a title="Electron CodShare " class="nav-link nvhome" href="/servers"><i class="fal fa-home mr-1"></i> Home</a>
             </li>
             <li class="nav-item">
-                <a title="vcodes" class="nav-link" href="/servers/tags"><i class="fal fa-tags mr-1"></i> Tags</a>
+                <a title="Electron CodShare " class="nav-link" href="/servers/tags"><i class="fal fa-tags mr-1"></i> Tags</a>
             </li>
             <li class="nav-item">
-                <a title="vcodes" class="nav-link" href="/"><i class="fal fa-robot mr-1"></i> Bots</a>
+                <a title="Electron CodShare " class="nav-link" href="/"><i class="fal fa-robot mr-1"></i> Bots</a>
             </li>
             <% if(user) {%>
             <li class="nav-item">
-                <a title="vcodes" class="nav-link" href="/server/add"><i class="fal fa-plus mr-1"></i> Add Server</a>
+                <a title="Electron CodShare " class="nav-link" href="/server/add"><i class="fal fa-plus mr-1"></i> Add Server</a>
             </li>
             <% } %>
             <% } %>
@@ -98,7 +98,7 @@
                 if(guild) {
                 if(guild.roles.cache.get(roles.administrator) || guild.roles.cache.get(roles.moderator)) {
                 %>
-                    <a title="vcodes" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
+                    <a title="Electron CodShare " class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
 
                 <% }} %>
             <% } %>
@@ -116,7 +116,7 @@
                   </a>
                 <div class="dropdown-menu dropdown-menu-right" style="max-width:220px!important;">
             <% languages.map(x => { %>
-                <a href="#" translate="no" onclick="doGTranslate('en|<%= x.code %>')" title="vcodes" class="dropdown-item">
+                <a href="#" translate="no" onclick="doGTranslate('en|<%= x.code %>')" title="Electron CodShare " class="dropdown-item">
                 <img src="https://www.countryflags.io/<%= x.flag %>/flat/32.png">
                     &nbsp;<%= x.name %>
                 </a>
@@ -133,7 +133,7 @@
               </li>
             <% } else { %>
             <li class="nav-item">
-                <a title="vcodes" class="btn btn-vcodes" href="/login"><i class="fal fa-sign-in mr-1"></i> Login</a>
+                <a title="vcoElectron CodShare des" class="btn btn-vcodes" href="/login"><i class="fal fa-sign-in mr-1"></i> Login</a>
             </li>
 	    <% } %>
           </ul>
