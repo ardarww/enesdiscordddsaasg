@@ -1,19 +1,19 @@
 
         module.exports = {
             bot: {
-                token: "MTA3NTkwNjU0NTkzMTUyNjI1NA.GNinSX.hxO3AsdYRqwg1W6zwZKmL9C8vJoXuaIK86tgbY" , // Bot List Bot Token from https://discord.com/developers/applications
-                prefix: "!",
+                token: process.env.token , // Bot List Bot Token from https://discord.com/developers/applications
+                prefix: "e!",
                 owners: ["852537099722948628","1055880790057156608","794510397235265547"],
                 mongourl: "mongodb+srv://tunaerkol:090909te@cluster0.gtdvxey.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
                 servers: {
-                    token: "MTA3NjAzMTA5MTMyNjA3MDgwNQ.Gk4bFA.IPb1ellMDeKfzaaY9BXGsLOfmcGVU4uplW_0GA", // Server List Bot Token
+                    token: process.env.servertoken, // Server List Bot Token
                     prefix: "e!"
                 }
             },
         
             website: {
                 callback: "https://scrawny-western-timpani.glitch.me/callback", //example : https://vcodes.xyz avoid / at last. 
-                secret: "eWEJvhZQUvx-Bnd-fZm2d54tW18HzmSM" ,
+                secret: process.env.secret ,
                 clientID: "1075906545931526254", // Bot client id.
                 tags: [ "Moderation", "Fun", "Minecraft","Economy","Guard","NSFW","Anime","Invite","Music","Logging", "Web Dashboard", "Reddit", "Youtube", "Twitch", "Crypto", "Leveling", "Game", "Roleplay", "Utility", "Turkish" ],
                 languages: [
