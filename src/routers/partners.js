@@ -2,7 +2,7 @@ const app = require('express').Router();
 const Database = require("quick.db");
 const path = require("path")
 
-console.log("[vcodes.xyz]: Partners router loaded.");
+console.log("[Electron CodShare]: Partners router loaded.");
 
 app.get("/partners", async (req,res) => {
     res.render("partners.ejs", {

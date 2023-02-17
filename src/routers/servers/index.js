@@ -3,7 +3,7 @@ const db = require("../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[vcodes.xyz/servers]: Index router loaded.");
+console.log("Electron CodShare/servers]: Index router loaded.");
 
 app.get("/", async (req,res) => {
     res.render("servers/index.ejs", {

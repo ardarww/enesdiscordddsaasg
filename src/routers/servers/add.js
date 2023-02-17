@@ -3,7 +3,7 @@ const db = require("../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[vcodes.xyz/servers]: Add Server router loaded.");
+console.log("[Electron CodShare/servers]: Add Server router loaded.");
 
 app.get("/add", global.checkAuth, async (req,res) => {
   if(!client.guilds.cache.get(config.server.id).members.cache.get(req.user.id)) return res.redirect("/error?code=403&message=To do this, you have to join our discord server.");

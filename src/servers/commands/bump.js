@@ -5,7 +5,7 @@ const serverData = require("../../database/models/servers/server.js");
 exports.run = async (client, message, args) => {
 	let findServer = await serverData.findOne({ id: message.guild.id });
 	if(!findServer) return message.channel.send(
-		"This server was not found in our list.\nAdd your server: https://vcodes.xyz/server/add"
+		"This server was not found in our list.\nAdd your server: https://scrawny-western-timpani.glitch.me/server/add"
 	);
 	let cooldown = 1800000;
   	let lastDaily = findServer.bump;
@@ -20,9 +20,9 @@ exports.run = async (client, message, args) => {
     const height = 125
     const canvas = createCanvas(width, height)
     const context = canvas.getContext('2d')
-    await registerFont('src/fonts/font.ttf', { family: 'vCodes' })
+    await registerFont('src/fonts/font.ttf', { family: 'Electron CodShare' })
     context.fillRect(0, 0, width, height)
-    context.font = 'bold 60pt vCodes'
+    context.font = 'bold 60pt Electron CodShare'
     context.textAlign = 'center'
     context.fillStyle = '#fff'
     context.fillText(kod1, 200, 90)

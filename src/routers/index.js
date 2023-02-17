@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const botsdata = require("../database/models/botlist/bots.js");
 
-console.log("[vcodes.xyz]: Index router loaded.");
+console.log("[Electron CodShare]: Index router loaded.");
 
 app.get("/", async (req,res) => {
     res.render("index.ejs", {
