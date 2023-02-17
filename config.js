@@ -1,10 +1,10 @@
 
         module.exports = {
             bot: {
-                token: process.env.token , // Bot List Bot Token from https://discord.com/developers/applications
+                token: "MTA3NTkwNjU0NTkzMTUyNjI1NA.GQPMJw.ADFOzii0_kTIG4QOdIH9-twJA7Czxu-gs7d8mc" , // Bot List Bot Token from https://discord.com/developers/applications
                 prefix: "e!",
                 owners: ["852537099722948628","1055880790057156608","794510397235265547"],
-                mongourl: "mongodb+srv://zelvoszivo:0xIQIPfFhjD9C30J@cluster0.rj36qvx.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
+                mongourl: "mongodb+srv://tunaerkol:090909te@cluster0.gtdvxey.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
                 servers: {
                     token: process.env.servertoken, // Server List Bot Token
                     prefix: "e!"
@@ -13,7 +13,7 @@
         
             website: {
                 callback: "https://scrawny-western-timpani.glitch.me/callback", //example : https://vcodes.xyz avoid / at last. 
-                secret: process.env.secret ,
+                secret: "8XjMMhFmUzkMPd8cnP4AE8aMaJm2Oo3b" ,
                 clientID: "1075906545931526254", // Bot client id.
                 tags: [ "Moderation", "Fun", "Minecraft","Economy","Guard","NSFW","Anime","Invite","Music","Logging", "Web Dashboard", "Reddit", "Youtube", "Twitch", "Crypto", "Leveling", "Game", "Roleplay", "Utility", "Turkish" ],
                 languages: [
@@ -124,42 +124,42 @@
             },
         
             server: {
-                id: "",
-                invite: "https://discord.gg/z7dBzygse4",
+                id: "1075904683954147470",
+                invite: "https://discord.gg/jqsvBmVxum",
                 roles: {
-                    administrator: "",
-                    moderator: "",
+                    administrator: "1075904684113535066",
+                    moderator: "1075904684079976517",
                     profile: {
-                        sitecreator : "",
-                        booster: "",
+                        sitecreator : "1075904684029661214",
+                        booster: "1075904684029661207",
                         sponsor: "",
-                        supporter: "",
-                        partnerRole: ""
+                        supporter: "1075904684079976509",
+                        partnerRole: "1075904683987705964"
                     },
                     codeshare: {
-                        javascript: "",
-                        html: "",
-                        substructure: "",
-                        bdfd: "", // Bot Designer For Discord
-                        fiveInvite: "",
-                        tenInvite: "",
-                        fifteenInvite: "",
-                        twentyInvite: ""
+                        javascript: "1075904683954147474",
+                        html: "1075904683954147472",
+                        substructure: "1075904683954147475",
+                        bdfd: "1075904683954147473", // Bot Designer For Discord
+                        fiveInvite: "1075904683987705959",
+                        tenInvite: "1075904683954147479",
+                        fifteenInvite: "1075904683954147478",
+                        twentyInvite: "1075904683954147477"
                     },
                     botlist: {
-                        developer: "",
-                        certified_developer: "",
-                        bot: "", // This is not your Bot ID, This is the Role ID Approved Bots get when they join your server
-                        certified_bot: "",
+                        developer: "1075904683987705967",
+                        certified_developer: ["1075904683987705968","1075904683987705966"],
+                        bot: "1075904683987705962", // This is not your Bot ID, This is the Role ID Approved Bots get when they join your server
+                        certified_bot: "1075904683987705961",
                     }
                 },
                 channels: {
-                    codelog: "",
-                    login: "",
-                    webstatus: "",
-                    uptimelog: "",
-                    botlog: "",
-                    votes: ""
+                    codelog: "1075904685820616759",
+                    login: "1075904685820616758",
+                    webstatus: "1075904685820616763",
+                    uptimelog: "1075904685820616762",
+                    botlog: "1075904685820616761",
+                    votes: "1075904685820616760"
                 }
             }
         
