@@ -52,7 +52,7 @@
     "vcodes.js": "1.0.1-renewed"
   },
   "engines": {
-    "node": "17.x"
+    "node": "12.x"
   },
   "repository": {
     "url": ""
