@@ -1,20 +1,20 @@
 
         module.exports = {
             bot: {
-                token: "", // Bot List Bot Token from https://discord.com/developers/applications
-                prefix: "",
-                owners: [""],
-                mongourl: "",  //https://mongodb.com/cloud/atlas/register
+                token: process.env.token , // Bot List Bot Token from https://discord.com/developers/applications
+                prefix: "e!",
+                owners: ["852537099722948628","1055880790057156608","794510397235265547"],
+                mongourl: "mongodb+srv://zelvoszivo:0xIQIPfFhjD9C30J@cluster0.rj36qvx.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
                 servers: {
-                    token: "", // Server List Bot Token
-                    prefix: ""
+                    token: process.env.servertoken, // Server List Bot Token
+                    prefix: "e!"
                 }
             },
         
             website: {
-                callback: "", //example : https://vcodes.xyz avoid / at last. 
-                secret: "",
-                clientID: "", // Bot client id.
+                callback: "https://scrawny-western-timpani.glitch.me/callback", //example : https://vcodes.xyz avoid / at last. 
+                secret: process.env.secret ,
+                clientID: "1075906545931526254", // Bot client id.
                 tags: [ "Moderation", "Fun", "Minecraft","Economy","Guard","NSFW","Anime","Invite","Music","Logging", "Web Dashboard", "Reddit", "Youtube", "Twitch", "Crypto", "Leveling", "Game", "Roleplay", "Utility", "Turkish" ],
                 languages: [
                     { flag: 'gb', code: 'en', name: 'English' },
