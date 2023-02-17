@@ -3,7 +3,7 @@ const db = require("../../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[vcodes.xyz/servers]: Join router loaded.");
+console.log("[Electron CodShare/servers]: Join router loaded.");
 
 app.get("/:guildID/delete", global.checkAuth, async (req,res) => {
     let serverData = await db.findOne({

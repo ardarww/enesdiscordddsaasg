@@ -2,7 +2,7 @@ const app = require('express').Router();
 const channels = global.config.server.channels,
       roles = global.config.server.roles;
 const path = require("path")
-console.log("[vcodes.xyz]: Admin/Partner router loaded.");
+console.log("[Electron CodShare]: Admin/Partner router loaded.");
 const client = global.Client;
 
 app.get("/admin/partners", global.checkAuth, async (req, res) => {

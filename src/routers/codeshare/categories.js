@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const codesSchema = require("../../database/models/codes.js");
 
-console.log("[vcodes.xyz]: Code Share/Categories router loaded.");
+console.log("[Electron CodShare]: Code Share/Categories router loaded.");
 
 app.get("/categories", global.checkAuth, async (req, res) => {
 

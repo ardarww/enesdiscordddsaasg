@@ -4,7 +4,7 @@ const client = global.Client;
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[vcodes.xyz]: Admin/CodeShare/Edit router loaded.");
+console.log("[Electron CodShare]: Admin/CodeShare/Edit router loaded.");
 
 app.post("/admin/editcode/:code", global.checkAuth, async (req, res) => {
     const rBody = req.body;
@@ -22,8 +22,8 @@ app.post("/admin/editcode/:code", global.checkAuth, async (req, res) => {
     }, function(err, docs) {})
     client.channels.cache.get(channels.codelog).send(new Discord.MessageEmbed()
         .setTitle("Code edited!").setColor("GREEN").setFooter(config.footer)
-        .setDescription(`The user named **[${req.user.username}](https://vcodes.xyz/user/${req.user.id})** edited the code named **${rBody['codename']}**.`)
-        .addField("Code Link", `https://vcodes.xyz/code/${kod}`, true)
+        .setDescription(`The user named **[${req.user.username}](https://scrawny-western-timpani.glitch.me/user/${req.user.id})** edited the code named **${rBody['codename']}**.`)
+        .addField("Code Link", `https://scrawny-western-timpani.glitch.me/code/${kod}`, true)
         .addField("Code Description", rBody['codedesc'], true)
         .addField("Code Category", rBody['category'], true)
     )

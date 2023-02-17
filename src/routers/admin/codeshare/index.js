@@ -4,7 +4,7 @@ const client = global.Client;
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[vcodes.xyz]: Admin/CodeShare/Index router loaded.");
+console.log("[Electron CodShare]: Admin/CodeShare/Index router loaded.");
 
 app.get("/admin/codes", global.checkAuth, async (req, res) => {
     let koddata = await codesSchema.find();

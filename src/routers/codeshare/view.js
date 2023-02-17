@@ -2,7 +2,7 @@ const app = require('express').Router();
 const codesSchema = require("../../database/models/codes.js");
 const client = global.Client;
 
-console.log("[vcodes.xyz]: Code Share/View router loaded.");
+console.log("[Electron CodShare]: Code Share/View router loaded.");
 
 app.get("/view/:code", global.checkAuth, async (req, res) => {
     let kod = req.params.code;

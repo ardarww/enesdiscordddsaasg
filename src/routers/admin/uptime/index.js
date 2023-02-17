@@ -3,7 +3,7 @@ const uptimeSchema = require("../../../database/models/uptime.js");
 const channels = global.config.server.channels,
 	  roles = global.config.server.roles;
 
-console.log("[vcodes.xyz]: Admin/Uptime/Index router loaded.");
+console.log("[Electron CodShare]: Admin/Uptime/Index router loaded.");
 
 app.get("/admin/uptimes", global.checkAuth, async (req, res) => {
     let updata = await uptimeSchema.find();

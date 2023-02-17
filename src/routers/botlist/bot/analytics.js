@@ -3,7 +3,7 @@ const botsdata = require("../../../database/models/botlist/bots.js");
 const client = global.Client;
 const channels = global.config.server.channels;
 
-console.log("[vcodes.xyz]: Botlist/Analytics router loaded.");
+console.log("[Electron CodShare]: Botlist/Analytics router loaded.");
 
 app.get("/bot/:botID/analytics", global.checkAuth, async (req, res) => {
     let botdata = await botsdata.findOne({

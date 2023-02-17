@@ -7,7 +7,7 @@ let sitedatalari = require("../../database/models/analytics-site.js");
 
 
 
-console.log("[vcodes.xyz]: Admin/Index router loaded.");
+console.log("[Electron CodShare]: Admin/Index router loaded.");
 app.get("/admin", global.checkAuth, async (req, res) => {
 	const botdata = await botsdata.find();
 	const codedata = await codesSchema.find();

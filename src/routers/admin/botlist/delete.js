@@ -10,7 +10,7 @@ const roles = global.config.server.roles;
 const channels = global.config.server.channels;
 const client = global.Client;
 
-console.log("[vcodes.xyz]: Admin/Botlist/Delete Bot router loaded.");
+console.log("[Electron CodeShare]: Admin/Botlist/Delete Bot router loaded.");
 
 app.get("/admin/delete/:botID", global.checkAuth, async (req, res) => {
     const botdata = await botsdata.findOne({

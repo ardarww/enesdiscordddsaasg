@@ -3,7 +3,7 @@ const banSchema = require("../../database/models/site-ban.js");
 const channels = global.config.server.channels,
       roles = global.config.server.roles;
 
-console.log("[vcodes.xyz]: Admin/Ban router loaded.");
+console.log("[Electron CodShare]: Admin/Ban router loaded.");
 
 app.get("/admin/userban", global.checkAuth, async (req, res) => {
     if (!config.bot.owners.includes(req.user.id)) return res.redirect('../admin');

@@ -3,7 +3,7 @@ const sdata = require("../../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[vcodes.xyz/servers]: Edit router loaded.");
+console.log("[Electron CodShare/servers]: Edit router loaded.");
 
 app.get("/:guildID/edit", global.checkAuth, async (req, res) => {
     let serverData = await sdata.findOne({

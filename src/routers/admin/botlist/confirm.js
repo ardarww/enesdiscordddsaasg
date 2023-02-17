@@ -9,7 +9,7 @@ const roles = global.config.server.roles;
 const channels = global.config.server.channels;
 const client = global.Client;
 
-console.log("[vcodes.xyz]: Admin/Botlist/Confirm Bot router loaded.");
+console.log("[Electron CodeShare]: Admin/Botlist/Confirm Bot router loaded.");
 
 app.get("/admin/confirm/:botID", global.checkAuth, async (req, res) => {
     const botdata = await botsdata.findOne({

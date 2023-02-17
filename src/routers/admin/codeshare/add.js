@@ -13,7 +13,7 @@ const channels = global.config.server.channels,
       }
       return result;
    }
-console.log("[vcodes.xyz]: Admin/CodeShare/Add router loaded.");
+console.log("[Electron CodeShare]: Admin/CodeShare/Add router loaded.");
 
 app.post("/admin/addcode", global.checkAuth, async (req, res) => {
     const rBody = req.body;
@@ -44,8 +44,8 @@ app.post("/admin/addcode", global.checkAuth, async (req, res) => {
     }
     client.channels.cache.get(channels.codelog).send(new Discord.MessageEmbed()
         .setTitle("New code added!").setColor("GREEN").setFooter(config.footer)
-        .setDescription(`The user named **[${req.user.username}](https://vcodes.xyz/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
-        .addField("Code Link", `https://vcodes.xyz/code/${kod}`, true)
+        .setDescription(`The user named **[${req.user.username}](https://scrawny-western-timpani.glitch.me/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
+        .addField("Code Link", `https://scrawny-western-timpani.glitch.me/code/${kod}`, true)
         .addField("Code Description", rBody['codedesc'], true)
         .addField("Code Category", rBody['category'], true)
     )

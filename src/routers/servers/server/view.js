@@ -4,7 +4,7 @@ const botsdb = require("../../../database/models/botlist/bots.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 const clientTwo = global.Client;
-console.log("[vcodes.xyz/servers]: View router loaded.");
+console.log("[Electron CodShare/servers]: View router loaded.");
 
 app.get("/:guildID", async (req,res) => {
     let sdb = await db.findOne({ id: req.params.guildID });
