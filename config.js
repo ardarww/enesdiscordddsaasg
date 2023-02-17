@@ -4,7 +4,7 @@
                 token: process.env.token , // Bot List Bot Token from https://discord.com/developers/applications
                 prefix: "e!",
                 owners: ["852537099722948628","1055880790057156608","794510397235265547"],
-                mongourl: "mongodb+srv://electroncod:electroncod@cluster0.cjoq6my.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
+                mongourl: "mongodb+srv://zelvoszivo:0xIQIPfFhjD9C30J@cluster0.rj36qvx.mongodb.net/?retryWrites=true&w=majority",  //https://mongodb.com/cloud/atlas/register
                 servers: {
                     token: process.env.servertoken, // Server List Bot Token
                     prefix: "-"
