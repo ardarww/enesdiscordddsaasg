@@ -160,7 +160,7 @@
     io.on('connection', socket => {
         io.emit("userCount", io.engine.clientsCount);
     });
-    http.listen(3000, () => { console.log("[vcodes.xyz]: Website running on 3000 port.")});
+    http.listen(3000, () => { console.log("[Electron CodShare]: Website running on 3000 port.")});
 
     //------------------- Routers -------------------//
 
