@@ -107,7 +107,7 @@ exports.help = {
 function msgError(msg, { channel }) {
     channel.send(new Discord.MessageEmbed()
     .setAuthor(global.clientSL.user.username,global.clientSL.user.avatarURL())
-    .setFooter('vcodes.xyz/servers')
+    .setFooter('Electron CodShare')
     .setDescription(msg)
     .setColor("RED")
     )
