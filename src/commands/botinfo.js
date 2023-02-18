@@ -27,8 +27,9 @@ module.exports.run = async (client,message,args) => {
    .setColor("#7289da")
    .addField("Server Count", `${b.serverCount || "N/A"}`, true)
    .addField("Owner(s)", `<@${b.ownerID}>\n${coowner.replace("<@>", "")}`, true)
-   .addField("Links", `[Invite](https://discord.com/oauth2/authorize?client_id=${b.botID}&scope=bot applications.commands&permissions=8)${website}${discord}${github}`, true)
-   message.channel.send(embed)
+  .addField("Links", `[Invite](https://discord.com/oauth2/authorize?client_id=${b.botID}&scope=bot applications.commands&permissions=8)${website}${discord}${github}`, true)
+   .setImage( "")
+   messag e.channel.send(embed)
 };
 exports.conf = {
     enabled: true,
