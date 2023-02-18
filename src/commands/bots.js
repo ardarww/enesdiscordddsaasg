@@ -8,7 +8,10 @@ module.exports.run = async (client,message,args) => {
    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
    .setDescription(`**Total ${bots.length} bots found.**`)
    .setColor("#7289da")
+   
    .addField("Bots", `${!bots ? "" : bots.map(a => "<@"+a.botID+">").join("\n")}`, true)
+      .setImage ("https://cdn.discordapp.com/attachments/1075103631738671104/1076617755375173652/standard_1.gif")
+
    message.channel.send(embed)
 };
 exports.conf = {
