@@ -158,14 +158,14 @@ if(!uptimerate)
         var hour = timeleft.hours;
        var minutes = timeleft.minutes;
        var seconds = timeleft.seconds;
-      
+
        db.set(`lastoffline`, newPresence.userID);
        let emb = new Discord.MessageEmbed()
-        .setAuthor(" Uptime Logs")
-        .setTitle("Uptime Alert!")
+        .setAuthor(" Çalışma Süresi Günlükleri")
+        .setTitle("Çalışma Süresi Uyarısı!")
        	.addField(`Bot`, `\`${newPresence.user.tag}\``, true)
-       	.addField(`Uptime Rate`, `**${uptimerate}%**`, true)
-       	.addField(`Downtime`, `\`${hour}\`h \`${minutes}\`m \`${seconds}\`s`, false)
+       	.addField(`Çalışma Süresi Oranı`, `**${uptimerate}%**`, true)
+       	.addField(`Kesinti`, `\`${hour}\`h \`${minutes}\`m \`${seconds}\`s`, false)
         .setColor("#00FF00")
          db.add(`checks_${newPresence.userID}`, 1)
        if(client.users.cache.get(botdata.ownerID)) {
@@ -208,7 +208,7 @@ client.on('ready',async () => {
         if(rnxd.votes === target)
             {
                 db.delete(`targetv`);
-                client.channels.cache.get("876784483565715466").send(`:tada: :tada: <@${rnxd.botID}> has Reached the Vote Target of ${target} Owner of Bot: <@${rnxd.ownerID}> :tada: :tada:`);
+                client.channels.cache.get("876784483565715466").send(`:tada: :tada: <@${rnxd.botID}> Oy Hedefine Ulaştı ${target} Bot Sahibi : <@${rnxd.ownerID}> :tada: :tada:`);
             }
             
             
@@ -286,11 +286,11 @@ return; }
                               db.set(`timefr_${bot.botID}`, Date.now())
                               var uptimerate = db.fetch(`rate_${bot.botID}`);
                               let emb = new Discord.MessageEmbed()
-        .setAuthor("Uptime Logs")
-        .setTitle("Uptime Alert!")
+        .setAuthor("Çalışma Süresi Günlükleri")
+        .setTitle("Çalışma Süresi Uyarısı!")
        	.addField(`Bot`, `\`${bot.username}\``, true)
-       	.addField(`Uptime Rate`, `**${uptimerate}%**`, true)
-       	.addField(`Downtime`, `\`${hour}\`h \`${minutes}\`m \`${seconds}\`s`, false)
+       	.addField(`Çalışma Süresi Oranı`, `**${uptimerate}%**`, true)
+       	.addField(`Kesinti`, `\`${hour}\`h \`${minutes}\`m \`${seconds}\`s`, false)
         .setColor("#00FF00")
          db.add(`checks_${bot.botID}`, 1)
        if(client.users.cache.get(bot.ownerID)) {
@@ -331,13 +331,13 @@ return; }
                  return;
                }
                 let declineembed = new Discord.MessageEmbed()
-             .setTitle("Bot Deleted")
-             .setDescription(`Reason: Bot Uptime was Gone Under 50%\n Moderator: ${client.user.username}\n Bot: <@${bot.botID}>\n Owner: <@${bot.ownerID}>`)
-             .setFooter("Embed Logs of Administration")
+             .setTitle("Bot Silindi")
+             .setDescription(`Sebep: Bot Çalışma Süresi %50'nin Altına Düştü\n Moderatör ${client.user.username}\n Bot: <@${bot.botID}>\n S: <@${bot.ownerID}>`)
+             .setFooter("Yönetim Günlüklerini Göm")
                client.channels.cache.get(config.channels.botlog).send(declineembed)
                if(client.guilds.cache.get(config.server.id).members.fetch(bot.ownerID))
                {
-               client.users.cache.get(bot.ownerID).send(`Your bot named **<@${bot.botID}>** has been deleted.\nReason: **Uptime was gone under 50%**\nAuthorized: **${client.user.username}**`)
+               client.users.cache.get(bot.ownerID).send(`Botunuzun adı **<@${bot.botID}>** silindi.\nNedeni: **Çalışma süresi %50'nin altına düştü**\nYetkili **${client.user.username}**`)
                
                   await botsdata.deleteOne({ botID: bot.botID, ownerID: bot.ownerID, botid: bot.botID })
                   db.set(`don_${bot.botID}`, "yes");
