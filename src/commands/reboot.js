@@ -3,9 +3,9 @@
 const Discord = require('discord.js');
 const fetch = require("node-fetch");
 exports.run = (client, message, args) => {
-    if(!global.config.bot.owners.includes(message.author.id)) return  message.reply('You dont have permission to use this command')
-	message.channel.send("Electron CodeShare : The bot is now rebooting").then(msg => {
-		console.log(`BOT: Restarting from Reboot Command`);
+    if(!global.config.bot.owners.includes(message.author.id)) return  message.reply('Bu komutu kullanma izniniz yok')
+	message.channel.send("Electron CodeShare : Bot şimdi yeniden başlatılıyor").then(msg => {
+		console.log(`BOT: Yeniden Başlatma Komutundan Yeniden Başlatma`);
 		process.exit(1);
 	})
 };

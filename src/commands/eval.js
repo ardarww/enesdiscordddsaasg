@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const bot = new Discord.Client();
 const { Client, Util } = require('discord.js');
 exports.run = async (client, message, args) => {
-    if(!global.config.bot.owners.includes(message.author.id)) return  message.reply('could not be granted access permission.')
+    if(!global.config.bot.owners.includes(message.author.id)) return  message.reply('erişim izni verilemedi.')
     try {
       var code = args.join(" ");
       var evaled = eval(code);

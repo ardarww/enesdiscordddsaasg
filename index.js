@@ -62,7 +62,7 @@ const claudette = require("./src/database/models/uptime.js")
             docs.forEach(docs => {
                 request(docs.link, async function(error, response, body) {
                   if(error) {
-                    console.error(`${docs.link} has been deleted on uptime system.\nReason: Invalid domain so request failed.`);
+                    console.error(`${docs.link} Çalışma Süresi Sisteminden Silindi.\nSebep: Geçersiz etki alanı, bu nedenle istek başarısız oldu.`);
                     await claudette.findOneAndDelete({ code: docs.code })
                   }
                 });
@@ -120,11 +120,13 @@ if(!uptimerate)
         
       
       let emb = new Discord.MessageEmbed()
-      	.setAuthor(" Uptime Logs")
-      	.setTitle("Downtime Alert!")
+           .setAuthor(" Çalışma Süresi Günlükleri")
+        .setTitle("Çalışma Süresi Uyarısı!")
        	.addField(`Bot`, `\`${newPresence.user.tag}\``, true)
-       	.addField(`Uptime Rate`, `**${uptimerate}%**`, true)
-        .setColor("#FF0000")
+       	.addField(`Çalışma Süresi Oranı`, `**${uptimerate}%**`, true)
+       	.addField(`Kesinti`, `\`${hour}\`h \`${minutes}\`m \`${seconds}\`s`, false)
+        .setColor("#00FF00")
+
         db.add(`checks_${newPresence.userID}`, 1)
       if(client.users.cache.get(botdata.ownerID)) {
           client.channels.cache.get(config.server.channels.botlog).send(`<@${botdata.ownerID}>`, emb) 
