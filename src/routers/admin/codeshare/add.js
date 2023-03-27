@@ -43,11 +43,11 @@ app.post("/admin/addcode", global.checkAuth, async (req, res) => {
         });
     }
     client.channels.cache.get(channels.codelog).send(new Discord.MessageEmbed()
-        .setTitle("Yeni kod eklendi!").setColor("GREEN").setFooter(config.footer)
-        .setDescription(`İsimli Kullanıcı **[${req.user.username}](https://electronn.glitch.me/user/${req.user.id})**Adlı Kodu Ekledi **${rBody['codename']}** sisteme.`)
-        .addField("Code Link", `https://electronn.glitch.me/codes/view/${kod}`, true)
-        .addField("Code Description", rBody['codedesc'], true)
-        .addField("Code Category", rBody['category'], true)
+        .setTitle(" <:9098blurpleannouncements:1076405269770293268> **Yeni kod eklendi!**").setColor("GREEN").setFooter(config.footer)
+        .setDescription(`<:8263blurplemembers:1076405260467327129> İsimli Kullanıcı **[${req.user.username}](https://electronn.glitch.me/user/${req.user.id})**Adlı Kodu Ekledi **${rBody['codename']}** sisteme.`)
+        .addField("<:8512blurplelink:1076405263881478196> Code Link", `https://electronn.glitch.me/codes/view/${kod}`, true)
+        .addField("<:3199blurplejoin:1076405233732820992> Code Açıklama", rBody['codedesc'], true)
+        .addField("Code Katagori", rBody['category'], true)
     )
     res.redirect('/codes/view/' + kod)
 });
