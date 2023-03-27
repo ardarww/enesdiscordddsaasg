@@ -43,8 +43,8 @@ app.post("/admin/addcode", global.checkAuth, async (req, res) => {
         });
     }
     client.channels.cache.get(channels.codelog).send(new Discord.MessageEmbed()
-        .setTitle("New code added!").setColor("GREEN").setFooter(config.footer)
-        .setDescription(`The user named **[${req.user.username}](https://electronn.glitch.me/user/${req.user.id})** added the code named **${rBody['codename']}** to the system.`)
+        .setTitle("Yeni kod eklendi!").setColor("GREEN").setFooter(config.footer)
+        .setDescription(`İsimli Kullanıcı **[${req.user.username}](https://electronn.glitch.me/user/${req.user.id})**Adlı Kodu Ekledi **${rBody['codename']}** sisteme.`)
         .addField("Code Link", `https://electronn.glitch.me/codes/view/${kod}`, true)
         .addField("Code Description", rBody['codedesc'], true)
         .addField("Code Category", rBody['category'], true)
