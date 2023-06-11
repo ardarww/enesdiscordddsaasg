@@ -21,7 +21,7 @@ app.get("/view/:code", global.checkAuth, async (req, res) => {
     if (koddata.codeCategory == "subs") {
         if (!client.guilds.cache.get(config.server.id).members.cache.get(req.user.id).roles.cache.get(config.server.roles.codeshare.substructure)) return res.redirect("/error?code=403&message=You is not competent to do this.");
     }
-    if (koddata.codeCategory == "5invites") {
+    if (koddata.codeCategory == "KaraNitro Substructure") {
         if (!client.guilds.cache.get(config.server.id).members.cache.get(req.user.id).roles.cache.get(config.server.roles.codeshare.fiveInvite)) return res.redirect("/error?code=403&message=You is not competent to do this.");
     }
     if (koddata.codeCategory == "10invites") {
