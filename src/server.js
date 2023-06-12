@@ -130,7 +130,7 @@
         } catch {};
         res.redirect(req.session.backURL || '/')
         client.users.fetch(req.user.id).then(async a => {
-        client.channels.cache.get(channels.login).send(new Discord.MessageEmbed().setAuthor(a.username, a.avatarURL({dynamic: true})).setThumbnail(a.avatarURL({dynamic: true})).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://electroncodes.fun.xyz/user/${a.id}) isimli kullanıcı **siteye** giriş yaptı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+        client.channels.cache.get(channels.login).send(new Discord.MessageEmbed().setAuthor(a.username, a.avatarURL({dynamic: true})).setThumbnail(a.avatarURL({dynamic: true})).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://electroncodes.fun/user/${a.id}) isimli kullanıcı **siteye** giriş yaptı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
         
         })
         }
@@ -173,7 +173,7 @@
     */
     console.log(`
       [===========================================]
-                       vcodes.xyz
+                       electroncodes.fun
         https://github.com/vcodes-xyz/benedict
                 Developed by Claudette
 
@@ -183,7 +183,7 @@
     console.log("\x1b[32m", "System loading, please wait...")
     sleep(1050)
     console.clear();
-    console.log('\x1b[36m%s\x1b[0m', "[vcodes.xyz]: General routers loading...");
+    console.log('\x1b[36m%s\x1b[0m', "[electroncodes.fun]: General routers loading...");
     sleep(500);
     app.use("/", require('./routers/index.js'))
     app.use("/", require('./routers/partners.js'))
@@ -191,7 +191,7 @@
 
     /* Uptime System */
     console.log(" ")
-    console.log('\x1b[36m%s\x1b[0m', "[vcodes.xyz]: Uptime system routers loading...");
+    console.log('\x1b[36m%s\x1b[0m', "[electroncodes.fun]: Uptime system routers loading...");
     sleep(500);
     app.use("/uptime", require('./routers/uptime/add.js'))
     app.use("/uptime", require('./routers/uptime/delete.js'))
@@ -199,14 +199,14 @@
 
     /* Profile System */
     console.log(" ")
-    console.log('\x1b[36m%s\x1b[0m', "[vcodes.xyz]: Profile system routers loading...");
+    console.log('\x1b[36m%s\x1b[0m', "[electroncodes.fun]: Profile system routers loading...");
     sleep(500);
     app.use("/user", require('./routers/profile/index.js'))
     app.use("/user", require('./routers/profile/edit.js'))
 
     /* Code Share System */
     console.log(" ")
-    console.log('\x1b[36m%s\x1b[0m', "[vcodes.xyz]: Code Share system routers loading...");
+    console.log('\x1b[36m%s\x1b[0m', "[electroncodes.fun]: Code Share system routers loading...");
     sleep(500);
     app.use("/codes", require('./routers/codeshare/view.js'))
     app.use("/codes", require('./routers/codeshare/list.js'))
