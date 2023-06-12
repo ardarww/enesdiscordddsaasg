@@ -112,7 +112,7 @@
         let banned = await banSchema.findOne({user: req.user.id})
         if(banned) {
         client.users.fetch(req.user.id).then(async a => {
-        client.channels.cache.get(channels.login).send(new Discord.MessageEmbed().setAuthor(a.username, a.avatarURL({dynamic: true})).setThumbnail(a.avatarURL({dynamic: true})).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://vcodes.xyz/user/${a.id}) isimli kullanıcı **siteye** giriş yapmaya çalıştı fakat siteden engellendiği için giriş yapamadı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+        client.channels.cache.get(channels.login).send(new Discord.MessageEmbed().setAuthor(a.username, a.avatarURL({dynamic: true})).setThumbnail(a.avatarURL({dynamic: true})).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://electroncodes.fun/user/${a.id}) isimli kullanıcı **siteye** giriş yapmaya çalıştı fakat siteden engellendiği için giriş yapamadı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
         })
         req.session.destroy(() => {
         res.json({ login: false, message: "You have been blocked from vCodes.", logout: true })
@@ -130,7 +130,7 @@
         } catch {};
         res.redirect(req.session.backURL || '/')
         client.users.fetch(req.user.id).then(async a => {
-        client.channels.cache.get(channels.login).send(new Discord.MessageEmbed().setAuthor(a.username, a.avatarURL({dynamic: true})).setThumbnail(a.avatarURL({dynamic: true})).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://vcodes.xyz/user/${a.id}) isimli kullanıcı **siteye** giriş yaptı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+        client.channels.cache.get(channels.login).send(new Discord.MessageEmbed().setAuthor(a.username, a.avatarURL({dynamic: true})).setThumbnail(a.avatarURL({dynamic: true})).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://electroncodes.fun.xyz/user/${a.id}) isimli kullanıcı **siteye** giriş yaptı.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
         
         })
         }
@@ -276,7 +276,7 @@
 
     /* Bot System */
     console.log(" ")
-    console.log('\x1b[36m%s\x1b[0m', "[vcodes.xyz]: Bot system loading...");
+    console.log('\x1b[36m%s\x1b[0m', "[electroncodes.fun]: Bot system loading...");
     app.use("/", require('./routers/api/api.js'))
     sleep(500)
 

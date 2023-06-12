@@ -20,7 +20,7 @@ module.exports.run = async (client,message,args) => {
    .setDescription("**[Vote for "+b.username+"#"+b.discrim+" on the Electron CodeShare website](https://electronn.glitch.me/bot/"+b.botID+"/vote)**")
    .addField("ID", b.botID, true)
    .addField("Username", b.username, true)
-   .addField("<:6585blurplecompass:1076405255941664868> Discriminator", b.discrim, true)
+   .addField(" Discriminator", b.discrim, true)
    .addField("Votes", b.votes, true)
    .addField("<:4847blurplecheck:1076405243794952213> Certificate", b.certificate, true)
    .addField("<:6585blurplecompass:1076405255941664868> Short Description", b.shortDesc, true)
