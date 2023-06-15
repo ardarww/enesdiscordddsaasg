@@ -172,7 +172,7 @@ if(!uptimerate)
         .setColor("#00FF00")
          db.add(`checks_${newPresence.userID}`, 1)
        if(client.users.cache.get(botdata.ownerID)) {
-           client.channels.cache.get(config.server.channels.botlog).send(`<@${botdata.ownerID}>`, emb) 
+        client.channels.cache.get(config.server.channels.botlog).send(`<@${botdata.ownerID}>`, emb) 
        } else {
            client.channels.cache.get(config.server.channels.botlog).send(emb) 
        }
