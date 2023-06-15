@@ -2,7 +2,7 @@ module.exports = {
   bot: {
     token: process.env.token, // Bot List Bot Token from https://discord.com/developers/applications
     prefix: "e!",
-    owners: ["718368309896151121", "794510397235265547"],
+    owners: ["718368309896151121", "794510397235265547","1003021347984777367"],
     mongourl:
       "mongodb+srv://zelvoszivo:0xIQIPfFhjD9C30J@cluster0.rj36qvx.mongodb.net/?retryWrites=true&w=majority", //https://mongodb.com/cloud/atlas/register
     servers: {
