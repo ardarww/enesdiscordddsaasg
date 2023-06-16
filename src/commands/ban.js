@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 
     exports.run = (client, message, args) => {
 
-        if(!message.member.roles.cache.has("BAN ATABİLEN ROL İD")){
+        if(!message.member.roles.cache.has("1075904684079976511","1075904684079976515")){
             const yetkiyok = new Discord.MessageEmbed()
             .setDescription(`${message.author} **Bu kodu kullanmak için gerekli yetkiye sahip değilsin.**`)
             .setColor('#ff0000')
