@@ -4,34 +4,34 @@
 
 
 <div class="container">
-<br><br>
+  <br><br>
 <div class="column">
-    <p class="has-text-white title is-large"><i class="fad fa-badge-check bodyIcon"></i>&nbsp;Certified Bots</p>
+    <p class="has-text-white title is-large"><i class="fa fa-badge-check has-text-warning"></i>&nbsp;Certified Bots</p>
     <p class="content has-text-white" style="margin-top: -20px;">They are ranked according to the votes they received.</p>
     <div class="columns is-multiline is-desktop is-variable is-7 pt-5">
         <% botdata.filter(a => a.certificate == "Certified").sort((a, b) => b.votes - a.votes).slice(0, 6).map(a => {%>
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
         <div class="card vcodes-card-custom bg-vcodes border-white border-0">
-          <div class="vcodes-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= a.backURL || '../img/undefined_back.png' %>);" title="vCodes.xyz" ></div>
+          <div class="vcodes-card-custom-img" onerror="backImgError(this);" style="background-image: url(<%= a.backURL || '../img/undefined_back.png' %>);"></div>
           <div class="vcodes-card-custom-avatar">
-            <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
+            <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
           </div>
           <div class="card-body">
            <div class="is-pulled-right mt-vcodes mt-1">
-            <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
+            <span data-tooltip="Total Votes" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
             <span data-tooltip="Server Count" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-server"></i>&nbsp;<%= a.serverCount || "N/A" %></span>
               </div>
-            <p translate="no" class="card-title is-size-4"><%= a.username %>
+            <h4 translate="no" class="card-title"><%= a.username %>
             <% if(a.certificate === "Certified") { %>
-              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check bodyIcon"></i></span>
+              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span>
             <% } %>
-            </p>
+            </h4>
             <p translate="no" class="card-text vCodesbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="vcodes" href="/bot/<%=a.botID%>" class="btn  btn-bot">View</a>
-            <a title="vcodes" href="/bot/<%=a.botID%>/invite" class="btn  btn-bot">Invite</a>
+            <a href="/bot/<%=a.botID%>" class="btn btn-tag btn-bot">View</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=<%=a.botID%>&scope=bot&permissions=8" class="btn btn-tag btn-bot">Invite</a>
           </div>
         </div>
       </div>
@@ -41,12 +41,12 @@
 </div>
   <% if(botdata.filter(a => a.certificate == "Certified").length > 6) { %>
   <center>
-    <a title="vcodes" href="/bots/certified" class="btn btn-more has-text-white">Show more certified bots</a>
+    <a href="/bots/certified" style="align-items: center; width: 55%;" class="btn btn-back has-text-white"><i class="fad fa-badge-check has-text-success"></i>&nbsp;Show more certified bots</a>
   </center>
   <% } %>
 <br><br><br><br>
 <div class="column">
-    <p class="has-text-white title is-large"><i class="fad fa-fire bodyIcon"></i>&nbsp;Most Popular Bots</p>
+    <p class="has-text-white title is-large"><i class="fad fa-fire has-text-danger"></i>&nbsp;Most Popular Bots</p>
     <p class="content has-text-white" style="margin-top: -20px;">They are ranked according to the votes they received.</p>
   </div>
   <div class="columns is-multiline is-desktop is-variable is-7 pt-5">
@@ -54,25 +54,25 @@
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
         <div class="card vcodes-card-custom bg-vcodes border-white border-0">
-          <div class="vcodes-card-custom-img" style="background-image: url(<%= a.backURL || '../img/undefined_back.png' %>);" title="Electron CodShare" ></div>
+          <div class="vcodes-card-custom-img" style="background-image: url(<%= a.backURL || "https://i.hizliresim.com/2sdunq.png" %>);"></div>
           <div class="vcodes-card-custom-avatar">
-            <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" title="Discord Bot Avatar" alt="Avatar" />
+            <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
           </div>
           <div class="card-body">
            <div class="is-pulled-right mt-vcodes mt-1">
-                <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
+                <span data-tooltip="Total Votes" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
                 <span data-tooltip="Server Count" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-server"></i>&nbsp;<%= a.serverCount || "N/A" %></span>
               </div>
-             <p translate="no" class="card-title is-size-4"><%= a.username %>
+            <h4 translate="no" class="card-title"><%= a.username %>
             <% if(a.certificate === "Certified") { %>
-              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check bodyIcon"></i></span>
+              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span>
             <% } %>
-            </p>
+            </h4>
             <p translate="no" class="card-text vCodesbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="vcodes" href="/bot/<%=a.botID%>" class="btn  btn-bot">View</a>
-            <a title="vcodes" href="/bot/<%=a.botID%>/invite" class="btn  btn-bot">Invite</a>
+            <a href="/bot/<%=a.botID%>" class="btn btn-tag btn-bot">View</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=<%=a.botID%>&scope=bot&permissions=8" class="btn btn-tag btn-bot">Invite</a>
           </div>
         </div>
         </div>
@@ -82,7 +82,7 @@
          </div>
   <br><br><br><br>
 <div class="column">
-    <p class="has-text-white title is-large"><i class="fa fa-clock bodyIcon"></i>&nbsp;Last Added Bots</p>
+    <p class="has-text-white title is-large"><i class="fa fa-clock has-text-info"></i>&nbsp;Last Added Bots</p>
     <p class="content has-text-white" style="margin-top: -20px;">They are listed according to the date they were added.</p>
   </div>
   <div class="columns is-multiline is-desktop is-variable is-7 pt-5">
@@ -90,25 +90,25 @@
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
         <div class="card vcodes-card-custom bg-vcodes border-white border-0">
-          <div class="vcodes-card-custom-img" style="background-image: url(<%= a.backURL || '../img/undefined_back.png' %>);" title="electron.tk" ></div>
+          <div class="vcodes-card-custom-img" style="background-image: url(<%= a.backURL || "https://i.hizliresim.com/2sdunq.png" %>);"></div>
           <div class="vcodes-card-custom-avatar">
-            <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" title="Discord Bot Avatar" alt="Avatar" />
+            <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
           </div>
           <div class="card-body">
            <div class="is-pulled-right mt-vcodes mt-1">
-                <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
+                <span data-tooltip="Total Votes" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
                 <span data-tooltip="Server Count" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-server"></i>&nbsp;<%= a.serverCount || "N/A" %></span>
               </div>
-            <p translate="no" class="card-title is-size-4"><%= a.username %>
+            <h4 translate="no" class="card-title"><%= a.username %>
             <% if(a.certificate === "Certified") { %>
-              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check bodyIcon"></i></span>
+              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span>
             <% } %>
-            </p>
+            </h4>
             <p translate="no" class="card-text vCodesbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="vcodes" href="/bot/<%=a.botID%>" class="btn  btn-bot">View</a>
-            <a title="vcodes" href="/bot/<%=a.botID%>/invite" class="btn  btn-bot">Invite</a>
+            <a href="/bot/<%=a.botID%>" class="btn btn-tag btn-bot">View</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=<%=a.botID%>&scope=bot&permissions=8" class="btn btn-tag btn-bot">Invite</a>
           </div>
         </div>
         </div>
@@ -119,7 +119,7 @@
   
 <br><br><br><br>
 <div class="column">
-    <p class="has-text-white title is-large"><i class="fa fa-random bodyIcon"></i>&nbsp;Random Bots</p>
+    <p class="has-text-white title is-large"><i class="fa fa-random has-text-success"></i>&nbsp;Random Bots</p>
     <p class="content has-text-white" style="margin-top: -20px;">They are listed according to random.</p>
   </div>
   <div class="columns is-multiline is-desktop is-variable is-7 pt-5">
@@ -141,25 +141,25 @@
       <div class="col-md-6 col-lg-4 pb-3">
         <div data-aos="fade-left">
         <div class="card vcodes-card-custom bg-vcodes border-white border-0">
-          <div class="vcodes-card-custom-img" style="background-image: url(<%= a.backURL || '../img/undefined_back.png' %>);" title="vCodes.xyz" ></div>
+          <div class="vcodes-card-custom-img" style="background-image: url(<%= a.backURL || "https://i.hizliresim.com/2sdunq.png" %>);"></div>
           <div class="vcodes-card-custom-avatar">
-            <img class="img-fluid" title="Discord Bot Avatar" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
+            <img class="img-fluid" onerror="imgError(this);" src="<%=a.avatar%>" alt="Avatar" />
           </div>
           <div class="card-body">
            <div class="is-pulled-right mt-vcodes mt-1">
-                <span data-tooltip="Votes this Month" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
+                <span data-tooltip="Total Votes" data-tooltip-location="left" class="badge badge-stats mb-vcodes mt-1 w-100"><i class="fad fa-chevron-up"></i>&nbsp;<%= a.votes || "0" %></span>
                 <span data-tooltip="Server Count" data-tooltip-location="left" class="badge badge-stats mt-1 w-100"><i class="fad fa-server"></i>&nbsp;<%= a.serverCount || "N/A" %></span>
               </div>
-            <p translate="no" class="card-title is-size-4"><%= a.username %>
+            <h4 translate="no" class="card-title"><%= a.username %>
             <% if(a.certificate === "Certified") { %>
-              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check bodyIcon"></i></span>
+              <span data-tooltip="Verified Bot" data-tooltip-location="top"><i class="fad fa-badge-check has-text-success"></i></span>
             <% } %>
-            </p>
+            </h4>
             <p translate="no" class="card-text vCodesbotDesc"><%= a.shortDesc %></p>
           </div>
           <div class="card-footer">
-            <a title="vcodes" href="/bot/<%=a.botID%>" class="btn  btn-bot">View</a>
-            <a title="vcodes" href="/bot/<%=a.botID%>/invite" class="btn  btn-bot">Invite</a>
+            <a href="/bot/<%=a.botID%>" class="btn btn-tag btn-bot">View</a>
+            <a href="https://discord.com/oauth2/authorize?client_id=<%=a.botID%>&scope=bot&permissions=8" class="btn btn-tag btn-bot">Invite</a>
           </div>
         </div>
       </div>
