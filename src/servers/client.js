@@ -45,7 +45,7 @@ serverClient.on('message', async message => {
 
 
 serverClient.on('ready',async () => {
-    console.log("[vcodes.xyz/servers]: Bot successfully connected as "+serverClient.user.tag+".");
+    console.log("[Electron CodeShare]: Bot successfully connected as "+serverClient.user.tag+".");
     serverClient.user.setPresence({ activity: { type: 'WATCHING', name: '-bump & -vote | electronn.glitch.me/servers' }, status: "dnd" });
 });
 
