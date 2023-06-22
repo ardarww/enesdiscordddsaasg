@@ -72,17 +72,6 @@
                     <a class="dropdown-item" href="/addbot"><i class="fa fa-paper-plane mr-2"></i> Submit Bot</a>
                     <a class="dropdown-item" href="/codes/categories"><i class="fa fa-code mr-2"></i> Code Share</a>
                     <a class="dropdown-item" href="/uptime/links"><i class="fa fa-sync-alt mr-2"></i> Uptime</a>
-                  <% if(user) { %>
-                <% 
-                let guild = bot.guilds.cache.get(config.server.id).members.cache.get(user.id);
-                if(guild) {
-                if(guild.roles.cache.get(roles.yonetici) || guild.roles.cache.get(roles.moderator)) {
-                %>
-                <li class="dropdown-item">
-                    <a class="nav-link" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
-                </li>
-                <% }} %>
-            <% } %>
                   
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item dropdown-danger" href="/logout"><i class="fad fa-sign-out mr-2"></i> Logout</a>
